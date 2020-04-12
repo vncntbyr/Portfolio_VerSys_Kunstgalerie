@@ -1,1 +1,1 @@
-"# Portfolio_VerSys_Kunstgalerie" 
+Repository für die Portfolio-Prüfung in Verteilte Systeme
