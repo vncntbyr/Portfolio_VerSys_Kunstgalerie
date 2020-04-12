@@ -20,7 +20,7 @@ public class Kunstgalerie implements Serializable {
 	
 	@Id
 	@NotNull
-	private String id = "";
+	private long id;
 	
 	@NotNull(message = "Der Ort darf nicht leer sein.")
 	private String ort = "";
