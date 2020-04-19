@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -25,12 +27,11 @@ public class Kunstgalerie implements Serializable {
 	@NotNull(message = "Der Ort darf nicht leer sein.")
 	private String ort = "";
 	
-	@Size(min = 1, max = 69, message = "Es können nur maximal 69 Exponate ausgestellt werden. Die Anzahl muss also zwischen 1 und 69 liegen")
 	@NotNull(message = "Die Anzahl der Exponate darf nicht leer sein, eine Kunstausstellung ohne Exponate lohnt sich nicht!")
 	private int exponate = 0;
 	
 	@OneToMany(mappedBy="kunstgalerie")
-    private List<Gemaelde> gemaelde = new ArrayList<>();
+        private List<Gemaelde> gemaelde = new ArrayList<>();
 	
 	/*
 	 * Standard-Konstruktor

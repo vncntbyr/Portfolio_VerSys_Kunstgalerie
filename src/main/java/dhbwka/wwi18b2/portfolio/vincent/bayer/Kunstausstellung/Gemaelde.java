@@ -19,7 +19,7 @@ import lombok.Data;
 public class Gemaelde implements Serializable {
 
 	@ManyToOne
-    private Kunstgalerie kunstgalerie;
+        private Kunstgalerie kunstgalerie;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,12 +27,12 @@ public class Gemaelde implements Serializable {
 	private long id;
 	 
 	@Column(length = 64)
-    @Size(min = 1, max = 64, message = "Der Künstlername muss zwischen einem und 64 Zeichen lang sein.")
-    @NotNull(message = "Es muss einen Künstler geben, das Feld darf nicht leer sein.")
-    private String kuenstler = "";
+        @Size(min = 1, max = 64, message = "Der Künstlername muss zwischen einem und 64 Zeichen lang sein.")
+        @NotNull(message = "Es muss einen Künstler geben, das Feld darf nicht leer sein.")
+        private String kuenstler = "";
 	
 	@NotNull(message = "Das Jahr darf nicht leer sein.")
-    private int jahr = 0;
+         private int jahr = 0;
 	
 	@Column(length = 64) //Bedeutet, dass für die Datenspeicherung die Maximallänge der Spalte 64 Zeichen ist
 	@Size(min = 1, max = 64, message = "Der Name muss zwischen einem und 64 Zeichen lang sein.")
